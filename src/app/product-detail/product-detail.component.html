@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Detalles del Producto</h2>
+      <div class="product-detail">
+        <div class="product-image">
+          <img [src]="product.image" alt="{{ product.title }}">
+        </div>
+        <div class="product-info">
+          <h2>{{ product.title }}</h2>
+          <p>{{ product.description }}</p>
+          <p>Precio: ${{ product.price }}</p>
+          <p>Stock disponible: {{ product.stock }}</p>
+          <div class="col-md-12">
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-md-12">
+      <button routerLink="/" class="btn btn-primary">Volver al Home</button>
+    </div>
+  </div>
+</div>
+

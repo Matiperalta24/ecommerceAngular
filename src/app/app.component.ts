@@ -1,13 +1,24 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'product/:id', component: ProductDetailComponent },
+  { path: 'contact', component: ContactFormComponent },
+];
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  standalone: true,
+  imports: [RouterModule, HomeComponent, ProductDetailComponent, ContactFormComponent]
 })
 export class AppComponent {
   title = 'ecommerce';
 }
+
+
+
