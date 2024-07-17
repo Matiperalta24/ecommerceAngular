@@ -1,67 +1,118 @@
+/* Estilos generales del navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  background-color: #343a40;
+  background-color: #333; 
+  padding: 15px 20px;
   color: white;
 }
 
+/* Estilos para los enlaces del navbar */
 .navbar a {
   color: white;
   text-decoration: none;
-  margin-right: 1rem;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-  text-decoration: underline;
+  color: #ffdd57; 
 }
 
-.navbar-brand a {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.navbar-links {
-  display: flex;
-  align-items: center;
-}
-
-.navbar-search {
-  display: flex;
-  align-items: center;
-}
-
-.navbar-search input {
-  padding: 0.5rem;
+/* Estilo para el campo de búsqueda */
+.navbar input[type="text"] {
+  padding: 8px;
   border: none;
   border-radius: 4px;
+  font-size: 16px;
 }
 
-.navbar-search input:focus {
+/* Estilo del campo de búsqueda en foco */
+.navbar input[type="text"]:focus {
   outline: none;
+  border: 2px solid #ffdd57; 
 }
 
+/* Responsividad */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; 
+    align-items: flex-start;
+  }
+
+  .navbar a {
+    margin: 5px 0; 
+  }
+
+  .navbar input[type="text"] {
+    width: 80%; 
+    margin-top: 10px;
+  }
+}
+
+/* Estilos generales del contenedor */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+  gap: 20px; 
+  padding: 20px;
+}
+
+/* Estilos para las tarjetas de producto */
 .card {
-  width: 18rem;
-  margin: 1rem;
-  display: inline-block;
-  vertical-align: top;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
+/* Estilos para la imagen del producto */
 .card img {
   width: 100%;
-  height: auto;
-  object-fit: cover;
+  height: auto; 
 }
 
+/* Estilos para el cuerpo de la tarjeta */
 .card-body {
-  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.25em;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 1em;
+  color: #555;
+}
+
+/* Estilo para el botón */
+.verDetalle {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .verDetalle:hover {
   background-color: #0056b3;
 }
 
-  
-  
+/* Estilos para el mensaje de "No hay productos disponibles" */
+p {
+  text-align: center;
+  font-size: 1.2em;
+  color: #777;
+}
+

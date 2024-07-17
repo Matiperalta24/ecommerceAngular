@@ -5,7 +5,7 @@
       <h5 class="card-title">{{ product.title }}</h5>
       <p class="card-text">{{ product.description }}</p>
       <p class="card-text">Precio: ${{ product.price }}</p>
-      <a [routerLink]="['/product', product.id]" class="btn btn-primary">Ver detalle</a>
+      <button class="button" [routerLink]="['/product', product.id]">Ver detalle</button>
     </div>
   </div>
 </div>

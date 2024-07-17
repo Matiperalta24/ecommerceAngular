@@ -9,13 +9,18 @@ import { ProductService } from '../product.service';
   standalone: true,
   imports: [CommonModule],  // Importa CommonModule para utilizar las directivas *ngIf
   template: `
-    <h1>Producto</h1>
-    <div *ngIf="product">
-      <h2>{{ product.title }}</h2>
-      <img [src]="product.image" alt="{{ product.title }}">
-      <p>{{ product.description }}</p>
-      <button (click)="goBack()">Volver al inicio</button>
-    </div>
+      <h1>Producto</h1>
+          <div *ngIf="product" class="product-detail-container">
+            <div class="product-header">
+              <h2>{{ product.title }}</h2>
+            </div>
+            <div class="product-content">
+              <img [src]="product.image" alt="{{ product.title }}">
+              <p class="text-detail">{{ product.description }}</p>
+            </div>
+            <button (click)="goBack()">Volver al inicio</button>
+          </div>
+
   `,
   styleUrls: ['./product-detail.component.css']
 })
